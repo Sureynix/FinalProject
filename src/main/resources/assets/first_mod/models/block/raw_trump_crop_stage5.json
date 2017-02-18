@@ -1,0 +1,6 @@
+{
+    "parent": "block/crop",
+    "textures": {
+        "crop": "first_mod:blocks/raw_trump_crop_stage5"
+    }
+}
