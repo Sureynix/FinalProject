@@ -2,6 +2,7 @@ package net.heletz.firstMod;
 
 import net.heletz.firstMod.items.*;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.EntityList;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
@@ -10,6 +11,7 @@ import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
 import net.minecraftforge.common.util.EnumHelper;
+import net.minecraftforge.fml.common.registry.EntityRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 /**
@@ -20,6 +22,7 @@ public final class myItems extends Item {
     public static Item neon_cat_item;
     public static Item trump_item;
     public static Item raw_trump;
+    public static Item trump_grenade;
     public static ResourceLocation location = new ResourceLocation("first_mod", "trump_defense_sound");
     public static SoundEvent event = new SoundEvent(location);
     public static ItemArmor.ArmorMaterial trump_defense = EnumHelper.addArmorMaterial("trump_defense", "first_mod:trump_defense", 40, new int[]{1, 3, 2, 1}, 35, event, 1.0f);
@@ -59,6 +62,8 @@ public final class myItems extends Item {
         GameRegistry.register(trump_sword = new Sword("trump_sword", trump_sword_material));
         GameRegistry.register(trump_pickaxe = new Pickaxe("trump_pickaxe", trump_pickaxe_material));
         GameRegistry.register(trump_spade = new Spade("trump_spade", trump_spade_material));
+        GameRegistry.register(trump_grenade = new TrumpGrenade());
+
     }
 
 }

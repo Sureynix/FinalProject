@@ -19,6 +19,7 @@ public class ItemRenderRegister {
         registerItemRenderer(myItems.trump_pickaxe);
         registerItemRenderer(myItems.trump_spade);
         registerItemRenderer(myItems.trump_sword);
+        registerItemRenderer(myItems.trump_grenade);
     }
     public static void registerItemRenderer (Item item) {
 

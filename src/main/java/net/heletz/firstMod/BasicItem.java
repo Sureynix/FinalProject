@@ -2,6 +2,7 @@ package net.heletz.firstMod;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+import net.minecraft.util.EnumParticleTypes;
 
 /**
  * Created by Sureynix on 1/15/17.

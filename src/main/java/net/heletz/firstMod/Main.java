@@ -1,10 +1,14 @@
 package net.heletz.firstMod;
 
+import net.heletz.firstMod.Events.*;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 /**
  * Created by Sureynix on 1/15/17.
@@ -30,7 +34,12 @@ public class Main {
         proxy.init(e);
         Recipes x = new Recipes();
         x.DonaldTrump();
-
+        GameRegistry.registerWorldGenerator(new Generation(), 0);
+        MinecraftForge.EVENT_BUS.register(new EntityDrops());
+        MinecraftForge.EVENT_BUS.register(new ItemThrown());
+        MinecraftForge.EVENT_BUS.register(new BlockBreak());
+        MinecraftForge.EVENT_BUS.register(new PlayerInteraction());
+        MinecraftForge.EVENT_BUS.register(new Player());
     }
 
     @Mod.EventHandler
@@ -38,5 +47,10 @@ public class Main {
         proxy.postInit(e);
     }
 
+    @Mod.EventHandler
+    public void serverLoad(FMLServerStartingEvent event) {
+        event.registerServerCommand(new TrumpEverywhere());
+    }
 
 }
+
