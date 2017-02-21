@@ -14,6 +14,7 @@ public class BlockBreak {
     public void blockBroken (BlockEvent.BreakEvent event) {
         if (event.getState().getBlock().equals(ModBlocks.trumpBlock)) {
             event.getPlayer().dropItem(myItems.trump_defense_chestplate, 2);
+
             event.getWorld().newExplosion(event.getPlayer(), event.getPlayer().posX, event.getPlayer().posY, event.getPlayer().posZ, 100, true, true);
             event.getPlayer().dropItem(Seeds.raw_trump_seed, 20);
         }

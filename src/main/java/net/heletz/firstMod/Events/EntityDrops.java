@@ -1,7 +1,6 @@
 package net.heletz.firstMod.Events;
 
 import net.heletz.firstMod.myItems;
-import net.minecraft.entity.monster.EntityZombie;
 import net.minecraft.entity.passive.EntityBat;
 import net.minecraft.entity.passive.EntityChicken;
 import net.minecraft.entity.passive.EntityCow;

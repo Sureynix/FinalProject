@@ -1,20 +1,17 @@
 package net.heletz.firstMod;
 
 
-        import java.util.ArrayList;
-        import java.util.List;
-        import java.util.Random;
-
         import net.minecraft.command.CommandException;
-        import net.minecraft.command.ICommand;
-        import net.minecraft.command.ICommandSender;
-        import net.minecraft.entity.monster.EntityZombie;
-        import net.minecraft.entity.passive.EntityCow;
-        import net.minecraft.entity.passive.EntityZombieHorse;
-        import net.minecraft.entity.player.EntityPlayer;
-        import net.minecraft.server.MinecraftServer;
-        import net.minecraft.util.math.BlockPos;
-        import net.minecraft.world.World;
+import net.minecraft.command.ICommand;
+import net.minecraft.command.ICommandSender;
+import net.minecraft.entity.passive.EntityZombieHorse;
+import net.minecraft.server.MinecraftServer;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 
 public class TrumpEverywhere implements ICommand {
     public List<String> aliases;

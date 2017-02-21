@@ -14,6 +14,7 @@ public class BlockRenderRegister {
     public static void registerBlockRenderer () {
         reg(ModBlocks.firstBlock);
         reg(ModBlocks.trumpBlock);
+        reg(ModBlocks.trumpOre);
     }
     public static void reg(Block block) {
         Minecraft.getMinecraft().getRenderItem().getItemModelMesher()
